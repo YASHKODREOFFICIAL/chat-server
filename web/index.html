@@ -1,22 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>C Chat</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cipher Chat</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
-<div class="chat-container">
-  <h2>Chat App</h2>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="navbar-brand">
+      <span class="logo-dot"></span>
+      <span class="logo-text">Cipher</span>
+    </div>
+    <div class="navbar-status">
+      <span class="status-dot"></span>
+      <span>Live Chat</span>
+    </div>
+  </header>
 
-  <div id="chat-box"></div>
+  <!-- CHAT WRAPPER -->
+  <div class="chat-wrapper">
+    <div class="chat-container">
 
-  <div class="input-area">
-    <input type="text" id="message" placeholder="Enter message..." />
-    <button onclick="sendMessage()">Send</button>
+      <!-- Card header -->
+      <div class="chat-card-header">
+        <span class="room-icon">💬</span>
+        <div>
+          <p class="room-name">General</p>
+          <p class="room-sub">Public room</p>
+        </div>
+      </div>
+
+      <!-- Message area — id="chat-box" unchanged for script.js -->
+      <div id="chat-box"></div>
+
+      <!-- Input area — id="message" and onclick="sendMessage()" unchanged -->
+      <div class="input-area">
+        <input type="text" id="message" placeholder="Say something…" autocomplete="off"/>
+        <button onclick="sendMessage()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+               stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+
+    </div>
   </div>
-</div>
 
-<script src="script.js"></script>
+  <!-- Original script — completely unchanged -->
+  <script src="script.js"></script>
 </body>
 </html>
